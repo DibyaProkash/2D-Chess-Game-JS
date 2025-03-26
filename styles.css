@@ -1,0 +1,206 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+}
+
+#welcome-screen {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#welcome-screen h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+#welcome-screen button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#welcome-screen button:hover {
+    background-color: #2980b9;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    border: 5px solid #3c2f2f;
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    transition: all 0.2s ease;
+}
+
+.light {
+    background-color: #ede0d4;
+    opacity: 0.9;
+}
+
+.dark {
+    background-color: #9b8569;
+    opacity: 0.9;
+}
+
+.selected {
+    background-color: rgba(255, 255, 0, 0.5); 
+    transform: scale(1.05);
+}
+
+.possible-move {
+    background-color: rgba(0, 255, 0, 0.3);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+}
+
+#status {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#status.game-over {
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#status.game-over:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffd700;
+}
+
+#timers {
+    font-size: 18px;
+    text-align: center;
+}
+
+#move-history {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 16px;
+    text-align: left;
+}
+
+.promotion-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.promotion-options h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.promotion-options button {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promotion-options button:hover {
+    background-color: #2980b9;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover {
+    background-color: #c0392b;
+}
+
+#controls button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+#footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+}
+
+.piece {
+    display: block;
+    font-size: 40px; /* Match your .square font-size */
+    line-height: 70px; /* Match your square height */
+    text-align: center;
+}

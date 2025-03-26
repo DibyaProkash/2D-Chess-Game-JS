@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-screen">
+        <h1>Chess Master</h1>
+        <button id="single-player">Single Player</button>
+    </div>
+    
+    <div id="game-container" class="hidden">
+        <div id="game-wrapper">
+            <div id="board"></div>
+            <div id="sidebar">
+                <!-- <div id="chess-board"></div> -->
+                <div id="status"></div>
+                <!-- <div id="timers">
+                    <div>White: <span id="white-timer">10:00</span></div>
+                    <div>Black: <span id="black-timer">10:00</span></div>
+                </div> -->
+                <div id="move-history"></div>
+                <div id="controls">
+                    <button id="undo">Undo Move</button>
+                    <button id="restart">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p>Developed by Dibya Prokash Sarkar © <span id="year"></span></p>
+    </footer>
+    
+    <script src="script.js" defer></script> <!-- defer ensures DOM is ready -->
+</body>
+</html>
